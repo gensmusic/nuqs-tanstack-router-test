@@ -28,6 +28,7 @@ export const getSortingStateParser = <TData>(
       try {
         const parsed = JSON.parse(value);
         const result = z.array(sortingItemSchema).safeParse(parsed);
+        console.log("🌹🌹 parse with value result", result)
 
         if (!result.success) return null;
 
