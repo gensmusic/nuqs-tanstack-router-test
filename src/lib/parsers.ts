@@ -24,6 +24,7 @@ export const getSortingStateParser = <TData>(
 
   return createParser({
     parse: (value) => {
+      console.log("🌹🌹 parse with value", value, `typeof value`, typeof value)
       try {
         const parsed = JSON.parse(value);
         const result = z.array(sortingItemSchema).safeParse(parsed);
@@ -35,7 +36,8 @@ export const getSortingStateParser = <TData>(
         }
 
         return result.data as ExtendedColumnSort<TData>[];
-      } catch {
+      } catch (e){
+        console.error("🌹🌹 parse with value error", e)
         return null;
       }
     },

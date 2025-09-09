@@ -153,13 +153,16 @@ export function useDataTable<TData>(props: UseDataTableProps<TData>) {
       .withOptions(queryStateOptions)
       .withDefault(initialState?.sorting ?? []),
   );
+  console.log("⚽️⚽️ sorting now is", JSON.stringify(sorting))
 
   const onSortingChange = React.useCallback(
     (updaterOrValue: Updater<SortingState>) => {
       if (typeof updaterOrValue === "function") {
         const newSorting = updaterOrValue(sorting);
+        console.log("---🏀🏀 setSorting newSorting is", JSON.stringify(newSorting))
         setSorting(newSorting as ExtendedColumnSort<TData>[]);
       } else {
+        console.log("---🏀🏀 setSorting updaterOrValue is", JSON.stringify(updaterOrValue))
         setSorting(updaterOrValue as ExtendedColumnSort<TData>[]);
       }
     },

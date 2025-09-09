@@ -29,5 +29,13 @@ pnpm add zod
 
 
 # 3. add nuqs
-pnpm add nuqs@2.5.0-beta.3
+pnpm add nuqs@latest
+```
+
+# Update
+
+
+```sh
+# 更新 nuqs 到最新版本 2.6.0
+pnpm update nuqs@latest
 ```
