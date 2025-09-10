@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router'
-import logo from '../logo.svg'
 import { DataTable } from "@/components/data-table/data-table";
 import { DataTableColumnHeader } from "@/components/data-table/data-table-column-header";
 import { DataTableToolbar } from "@/components/data-table/data-table-toolbar";
